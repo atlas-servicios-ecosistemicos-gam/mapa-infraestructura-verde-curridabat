@@ -37,10 +37,10 @@ sf_limite_curridabat_web <-
   st_transform(3857)
 
 # Capa raster de infraestructura verde (en Web Mercator)
-# raster_infraestructura_verde <-
-#   raster(url_raster_infraestructura_verde) %>%
-#   crop(sf_limite_curridabat_web) %>%
-#   mask(sf_limite_curridabat_web)
+raster_infraestructura_verde <-
+  raster(url_raster_infraestructura_verde) %>%
+  crop(sf_limite_curridabat_web) %>%
+  mask(sf_limite_curridabat_web)
 
 #---------------- Paletas de colores ---------------
 
@@ -96,12 +96,12 @@ leaflet() %>%
     weight = 6.0,
     group = "Límite de Curridabat"
   ) %>%
-  # addRasterImage(
-  #   raster_infraestructura_verde,
-  #   colors = pal,
-  #   opacity = 1,
-  #   group = "Infraestructura verde"
-  # ) %>%
+  addRasterImage(
+    raster_infraestructura_verde,
+    colors = pal,
+    opacity = 1,
+    group = "Infraestructura verde"
+  ) %>%
   addLegend(
     title = "Infraestructura verde", 
     position = "bottomright",
