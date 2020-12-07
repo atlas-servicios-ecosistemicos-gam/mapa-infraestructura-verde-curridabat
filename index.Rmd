@@ -1,5 +1,5 @@
 ---
-title: "Mapa de infraestructura verde en Curridabat"
+title: "Mapa de infraestructura verde del cantón de Curridabat"
 output: 
   flexdashboard::flex_dashboard:
     orientation: rows
@@ -79,7 +79,7 @@ pal <- colorFactor(
 Row
 -----------------------------------------------------------------------
 
-### Datos para descarga: [Capa de infraestructura verde en Curridabat](https://raw.githubusercontent.com/atlas-servicios-ecosistemicos-gam/datos/master/infraestructura-verde/curridabat/IV_CURRIDABAT.TIF)
+### Datos para descarga: [Capa geoespacial de infraestructura verde del cantón de Curridabat](https://raw.githubusercontent.com/atlas-servicios-ecosistemicos-gam/datos/master/infraestructura-verde/curridabat/IV_CURRIDABAT.TIF)
 ```{r}
 
 leaflet() %>%
